@@ -1,0 +1,31 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "local>trim21/renovate-config"
+  ],
+  "enabledManagers": [
+    "pixi"
+  ],
+  "separateMajorMinor": false,
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchFileNames": [
+        "docs/**"
+      ],
+      "enabled": false
+    },
+    {
+      "groupName": "pypi",
+      "matchDepTypes": [
+        "pypi-dependencies"
+      ]
+    },
+    {
+      "groupName": "conda",
+      "matchDepTypes": [
+        "dependencies"
+      ]
+    }
+  ]
+}
